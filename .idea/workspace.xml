@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Updated maven dependencies for a rest-assured project.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserPojo.java" afterDir="false" />
+    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Added structure of a restful interface.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/UserSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -46,13 +45,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="UserSteps.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.UserSteps" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserSteps.test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670068376014</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added structure of a restful interface.">
+      <created>1670194580618</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670194580618</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +122,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed readme." />
     <MESSAGE value="Updated maven dependencies for a rest-assured project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated maven dependencies for a rest-assured project." />
+    <MESSAGE value="Added structure of a restful interface." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added structure of a restful interface." />
   </component>
 </project>

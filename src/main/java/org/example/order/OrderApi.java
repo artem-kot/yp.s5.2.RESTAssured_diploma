@@ -1,4 +1,7 @@
 package org.example.order;
 
-public class OrderApi {
+import org.example.ClientInterface;
+
+public class OrderApi implements ClientInterface {
+
 }
