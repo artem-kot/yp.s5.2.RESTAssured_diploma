@@ -8,27 +8,25 @@ import org.example.ClientInterface;
 public class UserApi  implements ClientInterface {
 
     public RequestSpecification request(UserPojo user, String accessToken){
-        return spec
-                .with()
+        return RestAssured
+                .given()
+                .spec(spec)
                 .header("Authorization", accessToken)
-                .filters(requestFilter, responseFiler, allureLogger)
-                .and()
                 .body(user);
     }
 
     public RequestSpecification request(UserPojo user){
-        return spec
-                .with()
-                .filters(requestFilter, responseFiler, allureLogger)
-                .and()
+        return RestAssured
+                .given()
+                .spec(spec)
                 .body(user);
     }
 
     public RequestSpecification request(String accessToken){
-        return spec
-                .with()
-                .header("Authorization", accessToken)
-                .filters(requestFilter, responseFiler, allureLogger);
+        return RestAssured
+                .given()
+                .spec(spec)
+                .header("Authorization", accessToken);
     }
 
     public Response registerUser(UserPojo user){

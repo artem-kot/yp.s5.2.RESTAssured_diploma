@@ -24,19 +24,18 @@ import java.util.Map;
 
 public interface ClientInterface {
 
+//    Common filters to log requests and responses.
+    Filter requestFilter = new RequestLoggingFilter();
+    Filter responseFiler = new ResponseLoggingFilter();
+    Filter allureLogger = new AllureRestAssured();
+
 //    Common api client specifications.
     RequestSpecification spec = RestAssured.given()
             .baseUri("https://stellarburgers.nomoreparties.site")
             .basePath("/api")
             .contentType(ContentType.JSON)
-            .accept(ContentType.JSON);
-
-    //TODO: the issue now is that Authorization header is duplicated for some reason. This is a bug and it should be fixed.
-
-//    Common filters to log requests and responses.
-    Filter requestFilter = new RequestLoggingFilter();
-    Filter responseFiler = new ResponseLoggingFilter();
-    Filter allureLogger = new AllureRestAssured();
+            .accept(ContentType.JSON)
+            .filters(requestFilter, responseFiler, allureLogger);
 
 //    URL paths for different methods.
     String registerUserUrl = "/auth/register";

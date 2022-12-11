@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Added test cases for login procedure.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/UpdateUserTest.java" afterDir="false" />
+    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Bug with authorization header is found.&#10;Requires assessment.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/CreateUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/LoginUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/testdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670790107322</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Bug with authorization header is found.&#10;Requires assessment.">
+      <created>1670794859746</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670794859746</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +220,7 @@
     <MESSAGE value="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent." />
     <MESSAGE value="Enhanced structure, added testdata file to store temporary information (access token for created user). Added allure annotations." />
     <MESSAGE value="Added test cases for login procedure." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test cases for login procedure." />
+    <MESSAGE value="Bug with authorization header is found.&#10;Requires assessment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug with authorization header is found.&#10;Requires assessment." />
   </component>
 </project>
