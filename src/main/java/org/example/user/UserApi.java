@@ -1,19 +1,29 @@
 package org.example.user;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.example.ClientInterface;
 
+import java.util.Arrays;
+
 public class UserApi  implements ClientInterface {
 
-    public RequestSpecification request(UserPojo user, String... accessToken){
-        return RestAssured
-                .given()
-                .header("Authorization", accessToken) //TODO: fix square brackets for this.
-                .spec(spec)
-                .filters(requestFilter, responseFiler)
+    public RequestSpecification request(UserPojo user, String accessToken){
+        return spec
+                .with()
+                .header("Authorization", accessToken)
+                .filters(allureLogger)
+                .and()
+                .body(user);
+    }
+
+    public RequestSpecification request(UserPojo user){
+        return spec
+                .with()
+                .filters(allureLogger)
                 .and()
                 .body(user);
     }

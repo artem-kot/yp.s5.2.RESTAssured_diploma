@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Added structure of a restful interface.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/UserSteps.java" afterDir="false" />
+    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/user/BaseTestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/user/CreateUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/user/UserSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -52,18 +55,78 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="UserSteps.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreateUserTest">
+    <configuration name="UserSteps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.user.user.UserSteps" />
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.user.*" />
+          <option name="PATTERN" value="org.example.user.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.UserSteps" />
-      <option name="METHOD_NAME" value="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserTest.createDuplicateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
+      <option name="METHOD_NAME" value="createDuplicateUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserTest.createInvalidUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
+      <option name="METHOD_NAME" value="createInvalidUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserTest.createNewUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
+      <option name="METHOD_NAME" value="createNewUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,7 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserSteps.test" />
+        <item itemvalue="JUnit.CreateUserTest" />
+        <item itemvalue="JUnit.CreateUserTest.createDuplicateUserTest" />
+        <item itemvalue="JUnit.CreateUserTest.createInvalidUserTest" />
+        <item itemvalue="JUnit.CreateUserTest.createNewUserTest" />
+        <item itemvalue="Application.UserSteps" />
       </list>
     </recent_temporary>
   </component>
@@ -105,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670194580618</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent.">
+      <created>1670629148627</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670629148627</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +197,7 @@
     <MESSAGE value="Changed readme." />
     <MESSAGE value="Updated maven dependencies for a rest-assured project." />
     <MESSAGE value="Added structure of a restful interface." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added structure of a restful interface." />
+    <MESSAGE value="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent." />
   </component>
 </project>

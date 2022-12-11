@@ -28,9 +28,8 @@ public interface ClientInterface {
     RequestSpecification spec = RestAssured.given()
             .baseUri("https://stellarburgers.nomoreparties.site")
             .basePath("/api")
-            .with()
-            .accept(ContentType.JSON)
-            .contentType(ContentType.JSON);
+            .contentType(ContentType.JSON)
+            .accept(ContentType.JSON);
 
 
 //    Common filters to log requests and responses.
