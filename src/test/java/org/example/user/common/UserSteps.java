@@ -42,9 +42,21 @@ public class UserSteps extends UserBaseTest {
         return response;
     }
 
+//    The method below applies access token for PUT request.
+    @Step("Update user")
+    public Response updateUser(UserPojo user) {
+        return client.updateUser(user, readData());
+    }
+
+//    The method below doesn't apply access token for PUT request.
+    @Step("Update user")
+    public Response updateUser(){
+        return client.updateUser(validUser);
+    }
+
     @Step("Delete user")
-    public Response deleteUser() {
-        return client.deleteUser(validUser, readData());
+    public void deleteUser() {
+        client.deleteUser(readData());
     }
 
     @After

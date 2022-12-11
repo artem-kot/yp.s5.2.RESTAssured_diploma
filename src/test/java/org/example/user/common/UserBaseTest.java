@@ -5,7 +5,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class UserBaseTest {
 
     String randomEmail = RandomStringUtils.randomAlphabetic(9) + "@example.org";
-    protected String userName = "JohnDoe";
+    String userName = "JohnDoe";
     String password = "password";
 
     String testdata = "src/test/resources/testdata";

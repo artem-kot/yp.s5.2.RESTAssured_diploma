@@ -11,16 +11,16 @@ import static org.hamcrest.CoreMatchers.equalTo;
 public class LoginUserTest extends UserSteps {
 
     @Test
-    @DisplayName("Test successful user login")
+    @DisplayName("Test for successful user login")
     @Description("Creating new user and logging in with new credentials.")
     public void logInRegisteredUserTest() {
         createUser(validUser);
         loginUser(validUser).then().statusCode(200).assertThat()
-                .body("user.name", equalTo(userName));
+                .body("success", equalTo(true));
     }
 
     @Test
-    @DisplayName("Test unsuccessful user login")
+    @DisplayName("Test for unsuccessful user login")
     @Description("Trying to log in user without registration.")
     public void logInUnregisteredUserTest() {
         loginUser(validUser).then().statusCode(401).assertThat()

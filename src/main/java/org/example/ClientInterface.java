@@ -31,6 +31,7 @@ public interface ClientInterface {
             .contentType(ContentType.JSON)
             .accept(ContentType.JSON);
 
+    //TODO: the issue now is that Authorization header is duplicated for some reason. This is a bug and it should be fixed.
 
 //    Common filters to log requests and responses.
     Filter requestFilter = new RequestLoggingFilter();

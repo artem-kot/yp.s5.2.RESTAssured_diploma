@@ -14,7 +14,7 @@ public class CreateUserTest extends UserSteps {
     @Description("Creating user account with a random email address. Validating the status code and name of the user.")
     public void createNewUserTest() {
         createUser(validUser).then().statusCode(200).assertThat()
-                .body("user.name", equalTo(userName));
+                .body("success", equalTo(true));
     }
 
     @Test

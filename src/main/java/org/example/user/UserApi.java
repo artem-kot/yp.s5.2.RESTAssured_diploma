@@ -1,13 +1,9 @@
 package org.example.user;
 
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.http.Header;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.example.ClientInterface;
-
-import java.util.Arrays;
 
 public class UserApi  implements ClientInterface {
 
@@ -28,6 +24,13 @@ public class UserApi  implements ClientInterface {
                 .body(user);
     }
 
+    public RequestSpecification request(String accessToken){
+        return spec
+                .with()
+                .header("Authorization", accessToken)
+                .filters(requestFilter, responseFiler, allureLogger);
+    }
+
     public Response registerUser(UserPojo user){
         return request(user).post(registerUserUrl);
     }
@@ -36,12 +39,16 @@ public class UserApi  implements ClientInterface {
         return request(user).post(loginUserUrl);
     }
 
-    public Response deleteUser(UserPojo user, String accessToken){
-        return request(user, accessToken).delete(deleteUserUrl);
+    public void deleteUser(String accessToken){
+        request(accessToken).delete(deleteUserUrl);
     }
 
     public Response updateUser(UserPojo user, String accessToken){
-        return request(user, accessToken).put(updateUserUrl);
+        return request(user, accessToken).patch(updateUserUrl);
+    }
+
+    public Response updateUser(UserPojo user){
+        return request(user).patch(updateUserUrl);
     }
 
     public Response getUser(){
