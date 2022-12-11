@@ -15,7 +15,7 @@ public class UserApi  implements ClientInterface {
         return spec
                 .with()
                 .header("Authorization", accessToken)
-                .filters(allureLogger)
+                .filters(requestFilter, responseFiler, allureLogger)
                 .and()
                 .body(user);
     }
@@ -23,7 +23,7 @@ public class UserApi  implements ClientInterface {
     public RequestSpecification request(UserPojo user){
         return spec
                 .with()
-                .filters(allureLogger)
+                .filters(requestFilter, responseFiler, allureLogger)
                 .and()
                 .body(user);
     }

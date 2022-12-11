@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/user/BaseTestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/user/CreateUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata" afterDir="false" />
+    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Enhanced structure, added testdata file to store temporary information (access token for created user). Added allure annotations.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/LoginUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/user/UserSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/user/BaseTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserBaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/user/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/CreateUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/user/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,30 +52,17 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CreateUserTest">
-    <configuration name="UserSteps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.user.user.UserSteps" />
-      <module name="diplom-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.user.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.LoginUserTest.logInRegisteredUserTest">
     <configuration name="CreateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="PATTERN" value="org.example.user.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.user.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.test.CreateUserTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -88,12 +72,12 @@
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="PATTERN" value="org.example.user.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.user.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.test.CreateUserTest" />
       <option name="METHOD_NAME" value="createDuplicateUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -104,29 +88,45 @@
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="PATTERN" value="org.example.user.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.user.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.test.CreateUserTest" />
       <option name="METHOD_NAME" value="createInvalidUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateUserTest.createNewUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginUserTest.logInRegisteredUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.user.user.*" />
+          <option name="PATTERN" value="org.example.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.user.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.user.CreateUserTest" />
-      <option name="METHOD_NAME" value="createNewUserTest" />
+      <option name="PACKAGE_NAME" value="org.example.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.LoginUserTest" />
+      <option name="METHOD_NAME" value="logInRegisteredUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginUserTest.logInUnregisteredUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.LoginUserTest" />
+      <option name="METHOD_NAME" value="logInUnregisteredUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginUserTest.logInRegisteredUserTest" />
+        <item itemvalue="JUnit.LoginUserTest.logInUnregisteredUserTest" />
         <item itemvalue="JUnit.CreateUserTest" />
         <item itemvalue="JUnit.CreateUserTest.createDuplicateUserTest" />
         <item itemvalue="JUnit.CreateUserTest.createInvalidUserTest" />
-        <item itemvalue="JUnit.CreateUserTest.createNewUserTest" />
-        <item itemvalue="Application.UserSteps" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670629148627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Enhanced structure, added testdata file to store temporary information (access token for created user). Added allure annotations.">
+      <created>1670789240214</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670789240214</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +205,7 @@
     <MESSAGE value="Updated maven dependencies for a rest-assured project." />
     <MESSAGE value="Added structure of a restful interface." />
     <MESSAGE value="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created sample test case structure. Stuck with a square brackets problem: accessToken value is wrapped in square brackets within the header RestAssured object, which leads to incorrect request being sent." />
+    <MESSAGE value="Enhanced structure, added testdata file to store temporary information (access token for created user). Added allure annotations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhanced structure, added testdata file to store temporary information (access token for created user). Added allure annotations." />
   </component>
 </project>

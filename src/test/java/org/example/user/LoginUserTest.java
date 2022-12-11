@@ -1,0 +1,29 @@
+package org.example.user;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
+import org.example.user.common.UserSteps;
+import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+
+@DisplayName("Test cases for user login")
+public class LoginUserTest extends UserSteps {
+
+    @Test
+    @DisplayName("Test successful user login")
+    @Description("Creating new user and logging in with new credentials.")
+    public void logInRegisteredUserTest() {
+        createUser(validUser);
+        loginUser(validUser).then().statusCode(200).assertThat()
+                .body("user.name", equalTo(userName));
+    }
+
+    @Test
+    @DisplayName("Test unsuccessful user login")
+    @Description("Trying to log in user without registration.")
+    public void logInUnregisteredUserTest() {
+        loginUser(validUser).then().statusCode(401).assertThat()
+                .body("message", equalTo(failedLoginAttemptError));
+    }
+}

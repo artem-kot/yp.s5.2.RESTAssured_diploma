@@ -1,12 +1,13 @@
-package org.example.user.user;
+package org.example.user;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
+import org.example.user.common.UserSteps;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 @DisplayName("Test cases for user creation")
-public class CreateUserTest extends UserSteps{
+public class CreateUserTest extends UserSteps {
 
     @Test
     @DisplayName("Test user account creation")

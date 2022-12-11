@@ -1,4 +1,4 @@
-package org.example.user.user;
+package org.example.user.common;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
@@ -9,22 +9,32 @@ import org.junit.Before;
 
 import java.io.*;
 
-public class UserSteps extends BaseTestData {
+public class UserSteps extends UserBaseTest {
     private UserApi client;
-    UserPojo validUser;
-    UserPojo invalidUser;
+    protected UserPojo validUser;
+    protected UserPojo invalidUser;
 
     @Before
     @Step("Create test data")
     public void setup() {
-        validUser = new UserPojo(randomEmail, "password", "JohnDoe");
-        invalidUser = new UserPojo(randomEmail, "password");
+        validUser = new UserPojo(randomEmail, password, userName);
+        invalidUser = new UserPojo(randomEmail, password);
         client = new UserApi();
     }
 
     @Step("Create user")
     public Response createUser(UserPojo user) {
         Response response = client.registerUser(user);
+        if(String.valueOf(response.statusCode()).equals("200")){
+            String accessToken = response.then().extract().body().path("accessToken").toString();
+            storeData(accessToken);
+        }
+        return response;
+    }
+
+    @Step("Login user")
+    public Response loginUser(UserPojo user) {
+        Response response = client.loginUser(user);
         if(String.valueOf(response.statusCode()).equals("200")){
             String accessToken = response.then().extract().body().path("accessToken").toString();
             storeData(accessToken);
