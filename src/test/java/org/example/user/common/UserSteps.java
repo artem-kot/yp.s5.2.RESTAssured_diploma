@@ -9,10 +9,10 @@ import org.junit.Before;
 
 import java.io.*;
 
-public class UserSteps extends UserBaseTest {
+public class UserSteps extends BaseTestData {
     private UserApi client;
-    protected UserPojo validUser;
-    protected UserPojo invalidUser;
+    public UserPojo validUser;
+    public UserPojo invalidUser;
 
     @Before
     @Step("Create test data")

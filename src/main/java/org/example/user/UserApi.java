@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.example.ClientInterface;
 
-public class UserApi  implements ClientInterface {
+public class UserApi implements ClientInterface {
 
     public RequestSpecification request(UserPojo user, String accessToken){
         return RestAssured

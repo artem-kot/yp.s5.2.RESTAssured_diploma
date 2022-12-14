@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Bug with authorization header is found.&#10;Requires assessment.">
+    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Fixed authorization header bug. Completed update user functionality tests.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/CreateOrderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/OrderSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/BaseTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +54,14 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.UpdateUserTest.updateUserPasswordTest">
-    <configuration name="CreateUserTest.createNewUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.user.common" />
+      <recent name="org.example.user" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CreateOrderTest.createValidAuthOrderTest">
+    <configuration name="CreateOrderTest.createValidAuthOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
@@ -61,8 +70,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.CreateUserTest" />
-      <option name="METHOD_NAME" value="createNewUserTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.CreateOrderTest" />
+      <option name="METHOD_NAME" value="createValidAuthOrderTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateOrderTest.createValidNonauthOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.CreateOrderTest" />
+      <option name="METHOD_NAME" value="createValidNonauthOrderTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -83,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UpdateUserTest.updateEmailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateUserTest.updateIsUnsuccessfulTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
@@ -93,23 +118,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.user" />
       <option name="MAIN_CLASS_NAME" value="org.example.user.UpdateUserTest" />
-      <option name="METHOD_NAME" value="updateEmailTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UpdateUserTest.updateUserNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="diplom-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.UpdateUserTest" />
-      <option name="METHOD_NAME" value="updateUserNameTest" />
+      <option name="METHOD_NAME" value="updateIsUnsuccessfulTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateOrderTest.createValidAuthOrderTest" />
+        <item itemvalue="JUnit.CreateOrderTest.createValidNonauthOrderTest" />
+        <item itemvalue="JUnit.UpdateUserTest.updateIsUnsuccessfulTest" />
         <item itemvalue="JUnit.UpdateUserTest.updateUserPasswordTest" />
         <item itemvalue="JUnit.UpdateUserTest" />
-        <item itemvalue="JUnit.CreateUserTest.createNewUserTest" />
-        <item itemvalue="JUnit.UpdateUserTest.updateUserNameTest" />
-        <item itemvalue="JUnit.UpdateUserTest.updateEmailTest" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670794859746</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed authorization header bug. Completed update user functionality tests.">
+      <created>1670796432371</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670796432371</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +237,7 @@
     <MESSAGE value="Enhanced structure, added testdata file to store temporary information (access token for created user). Added allure annotations." />
     <MESSAGE value="Added test cases for login procedure." />
     <MESSAGE value="Bug with authorization header is found.&#10;Requires assessment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug with authorization header is found.&#10;Requires assessment." />
+    <MESSAGE value="Fixed authorization header bug. Completed update user functionality tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed authorization header bug. Completed update user functionality tests." />
   </component>
 </project>
