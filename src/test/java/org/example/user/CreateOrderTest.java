@@ -2,31 +2,21 @@ package org.example.user;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.response.Response;
 import org.example.user.common.OrderSteps;
 import org.example.user.common.UserSteps;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 @DisplayName("Test cases for order creation process")
 public class CreateOrderTest extends OrderSteps {
-
-// TODO: Think how to properly inject user creation. Currently it fails because of user api absence.
     @Test
     @DisplayName("Test a successful creation of order by authorized user")
     @Description("Registering user and then creating an order. Validating that order was successfully created.")
     public void createValidAuthOrderTest() {
-        UserSteps user = new UserSteps();
-        user.createUser(user.validUser);
-        String accessToken = user.readData();
-
-        createOrder(validOrder, accessToken).then().statusCode(200).assertThat()
+        createOrder(validOrder, getAccessToken()).then().statusCode(200).assertThat()
                 .body("success", equalTo(true)).and()
-                .body("order.owner.name", equalTo(user.validUser.getName()));
-
-        user.cleanData();
+                .body("order.owner.name", equalTo(validUser.getName()));
     }
 
     @Test
@@ -36,5 +26,23 @@ public class CreateOrderTest extends OrderSteps {
         createOrder(validOrder).then().statusCode(200).assertThat()
                 .body("success", equalTo(true)).and()
                 .body("order.owner.name", equalTo(null));
+    }
+
+    @Test
+    @DisplayName("Test creation of order without ingredients")
+    @Description("Trying to create a new order without any ingredients.")
+    public void createNoIngredientsOrder() {
+        createOrder(emptyOrder).then().statusCode(400).assertThat()
+                .body("success", equalTo(false)).and()
+                .body("message", equalTo(noIngredientsProvidedError));
+    }
+
+    @Test
+    @DisplayName("Test creation of order with incorrect ingredients")
+    @Description("Trying to create a new order with incorrect ingredients.")
+    public void createWrongIngredientsOrder() {
+        createOrder(invalidOrder).then().statusCode(400).assertThat()
+                .body("success", equalTo(false)).and()
+                .body("message", equalTo(invalidIngredientsHashError));
     }
 }

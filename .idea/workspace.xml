@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Fixed authorization header bug. Completed update user functionality tests.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/CreateOrderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/OrderSteps.java" afterDir="false" />
+    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Implemented UserApi. Added prototype test.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/user/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/BaseTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/CreateOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/CreateOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/BaseTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/BaseTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/OrderSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/OrderSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/UserSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +61,22 @@
       <recent name="org.example.user" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CreateOrderTest.createValidAuthOrderTest">
+  <component name="RunManager" selected="JUnit.CreateOrderTest.createWrongIngredientsOrder">
+    <configuration name="CreateOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diplom-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.user" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.CreateOrderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateOrderTest.createValidAuthOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom-2" />
       <extension name="coverage">
@@ -93,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UpdateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateOrderTest.createWrongIngredientsOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
@@ -102,29 +118,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.UpdateUserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UpdateUserTest.updateIsUnsuccessfulTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="diplom-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.UpdateUserTest" />
-      <option name="METHOD_NAME" value="updateIsUnsuccessfulTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.CreateOrderTest" />
+      <option name="METHOD_NAME" value="createWrongIngredientsOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UpdateUserTest.updateUserPasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateUserTest.createNewUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diplom-2" />
       <extension name="coverage">
         <pattern>
@@ -133,8 +134,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.user" />
-      <option name="MAIN_CLASS_NAME" value="org.example.user.UpdateUserTest" />
-      <option name="METHOD_NAME" value="updateUserPasswordTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.user.CreateUserTest" />
+      <option name="METHOD_NAME" value="createNewUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateOrderTest.createWrongIngredientsOrder" />
+        <item itemvalue="JUnit.CreateOrderTest" />
         <item itemvalue="JUnit.CreateOrderTest.createValidAuthOrderTest" />
+        <item itemvalue="JUnit.CreateUserTest.createNewUserTest" />
         <item itemvalue="JUnit.CreateOrderTest.createValidNonauthOrderTest" />
-        <item itemvalue="JUnit.UpdateUserTest.updateIsUnsuccessfulTest" />
-        <item itemvalue="JUnit.UpdateUserTest.updateUserPasswordTest" />
-        <item itemvalue="JUnit.UpdateUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670796432371</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented UserApi. Added prototype test.">
+      <created>1670978023680</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670978023680</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implemented UserApi. Added prototype test.">
+      <created>1670978077522</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670978077522</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +253,7 @@
     <MESSAGE value="Added test cases for login procedure." />
     <MESSAGE value="Bug with authorization header is found.&#10;Requires assessment." />
     <MESSAGE value="Fixed authorization header bug. Completed update user functionality tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed authorization header bug. Completed update user functionality tests." />
+    <MESSAGE value="Implemented UserApi. Added prototype test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented UserApi. Added prototype test." />
   </component>
 </project>

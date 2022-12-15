@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface ClientInterface {
+    String testdata = "src/test/resources/testdata";
 
 //    Common filters to log requests and responses.
     Filter requestFilter = new RequestLoggingFilter();

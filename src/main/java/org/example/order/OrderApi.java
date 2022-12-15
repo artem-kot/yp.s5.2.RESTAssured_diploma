@@ -38,7 +38,7 @@ public class OrderApi implements ClientInterface {
     public Response createOrder(OrderPojo order){
         return request(order).post(createOrderUrl);
     }
-    public Response createOrder(OrderPojo order, String accessToken){ return request(order, accessToken).post(); }
-    public Response getUserOrders(String accessToken){ return getUserOrder(accessToken).get(); }
+    public Response createOrder(OrderPojo order, String accessToken){ return request(order, accessToken).post(createOrderUrl); }
+    public Response getUserOrders(String accessToken){ return getUserOrder(accessToken).get(getOrdersUrl); }
 
 }

@@ -1,15 +1,60 @@
 package org.example.user.common;
 
+import io.qameta.allure.Step;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.example.order.OrderApi;
+import org.example.order.OrderPojo;
+import org.example.user.UserApi;
+import org.example.user.UserPojo;
+import org.junit.After;
+import org.junit.Before;
+
+import java.io.*;
 
 public class BaseTestData {
+
+    public UserPojo validUser;
+    public UserPojo invalidUser;
+    protected UserApi userApi;
+    protected OrderPojo validOrder;
+    protected OrderPojo invalidOrder;
+    protected OrderPojo emptyOrder;
+    protected OrderApi orderApi;
+
+    @Before
+    @Step("Create test data")
+    public void setup() {
+        validUser = new UserPojo(randomEmail, password, userName);
+        invalidUser = new UserPojo(randomEmail, password);
+        userApi = new UserApi();
+
+        validOrder = new OrderPojo(validIngredients);
+        invalidOrder = new OrderPojo(invalidIngredients);
+        emptyOrder = new OrderPojo(emptyIngredients);
+        orderApi = new OrderApi();
+    }
+
+    @Step("Get access token")
+    public String getAccessToken(){
+        userApi.registerUser(validUser);
+        return userApi.readData();
+    }
+
+    @After
+    @Step("Clean test data")
+    public void cleanData() {
+        String data = userApi.readData();
+        if (data != null){
+            userApi.deleteUser(userApi.readData());
+            userApi.storeData("");
+        }
+    }
 
 //    Default user details
     String randomEmail = RandomStringUtils.randomAlphabetic(9) + "@example.org";
     String userName = "JohnDoe";
     String password = "password";
 
-    String testdata = "src/test/resources/testdata";
 
 //    Default order details
     String[] validIngredients = new String[]{
