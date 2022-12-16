@@ -40,7 +40,8 @@ public class CreateOrderTest extends OrderSteps {
     @Test
     @DisplayName("Test creation of order with incorrect ingredients")
     @Description("Trying to create a new order with incorrect ingredients.")
-    public void createWrongIngredientsOrder() {
+    public void createWrongIngredientsOrder() throws InterruptedException {
+        Thread.sleep(500); //this wait is added to overcome 429 error (NFR issue)
         createOrder(invalidOrder).then().statusCode(400).assertThat()
                 .body("success", equalTo(false)).and()
                 .body("message", equalTo(invalidIngredientsHashError));

@@ -22,14 +22,14 @@ public class OrderApi implements ClientInterface {
                 .body(order);
     }
 
-    public RequestSpecification getUserOrder(String accessToken){
+    public RequestSpecification getUsersOrders(String accessToken){
         return RestAssured
                 .given()
                 .spec(spec)
                 .header("Authorization", accessToken);
     }
 
-    public RequestSpecification getUserOrders(){
+    public RequestSpecification getUsersOrders(){
         return RestAssured
                 .given()
                 .spec(spec);
@@ -39,6 +39,7 @@ public class OrderApi implements ClientInterface {
         return request(order).post(createOrderUrl);
     }
     public Response createOrder(OrderPojo order, String accessToken){ return request(order, accessToken).post(createOrderUrl); }
-    public Response getUserOrders(String accessToken){ return getUserOrder(accessToken).get(getOrdersUrl); }
+    public Response getUserOrders(String accessToken){ return getUsersOrders(accessToken).get(getUsersOrdersUrl); }
+    public Response getUserOrders(){ return getUsersOrders().get(getUsersOrdersUrl); }
 
 }

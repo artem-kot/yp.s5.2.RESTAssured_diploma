@@ -23,4 +23,9 @@ public class OrderSteps extends BaseTestData {
     public Response getOrders(String accessToken) {
         return orderApi.getUserOrders(accessToken);
     }
+
+    @Step("Get user's orders")
+    public Response getOrders() {
+        return orderApi.getUserOrders();
+    }
 }

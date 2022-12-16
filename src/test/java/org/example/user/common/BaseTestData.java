@@ -71,4 +71,6 @@ public class BaseTestData {
     protected String noIngredientsProvidedError = "Ingredient ids must be provided";
     protected String invalidIngredientsHashError = "One or more ids provided are incorrect";
 
+    protected String missingAuthorizationError = "You should be authorised";
+
 }
