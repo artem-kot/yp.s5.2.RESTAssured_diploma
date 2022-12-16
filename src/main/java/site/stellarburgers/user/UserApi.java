@@ -1,9 +1,9 @@
-package org.example.user;
+package site.stellarburgers.user;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.example.ClientInterface;
+import site.stellarburgers.ClientInterface;
 
 import java.io.*;
 

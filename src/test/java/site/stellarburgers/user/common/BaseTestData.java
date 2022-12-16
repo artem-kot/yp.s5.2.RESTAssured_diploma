@@ -1,15 +1,13 @@
-package org.example.user.common;
+package site.stellarburgers.user.common;
 
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.example.order.OrderApi;
-import org.example.order.OrderPojo;
-import org.example.user.UserApi;
-import org.example.user.UserPojo;
+import site.stellarburgers.order.OrderApi;
+import site.stellarburgers.order.OrderPojo;
+import site.stellarburgers.user.UserApi;
+import site.stellarburgers.user.UserPojo;
 import org.junit.After;
 import org.junit.Before;
-
-import java.io.*;
 
 public class BaseTestData {
 

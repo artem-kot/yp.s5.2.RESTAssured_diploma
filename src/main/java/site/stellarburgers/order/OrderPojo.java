@@ -1,4 +1,4 @@
-package org.example.order;
+package site.stellarburgers.order;
 
 public class OrderPojo {
     private String[] ingredients;

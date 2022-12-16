@@ -1,11 +1,9 @@
-package org.example.user;
+package site.stellarburgers.user;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import org.example.user.common.OrderSteps;
+import site.stellarburgers.user.common.OrderSteps;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.empty;

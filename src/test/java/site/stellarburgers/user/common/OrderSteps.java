@@ -1,11 +1,8 @@
-package org.example.user.common;
+package site.stellarburgers.user.common;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import org.example.order.OrderApi;
-import org.example.order.OrderPojo;
-import org.example.user.UserApi;
-import org.junit.Before;
+import site.stellarburgers.order.OrderPojo;
 
 public class OrderSteps extends BaseTestData {
 

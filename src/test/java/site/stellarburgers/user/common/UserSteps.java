@@ -1,10 +1,8 @@
-package org.example.user.common;
+package site.stellarburgers.user.common;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import org.example.user.UserPojo;
-
-import java.io.*;
+import site.stellarburgers.user.UserPojo;
 
 public class UserSteps extends BaseTestData {
     @Step("Create user")

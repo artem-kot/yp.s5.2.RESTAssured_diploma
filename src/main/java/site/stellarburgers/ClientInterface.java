@@ -1,4 +1,4 @@
-package org.example;
+package site.stellarburgers;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;

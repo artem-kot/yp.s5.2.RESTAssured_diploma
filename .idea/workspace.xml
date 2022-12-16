@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Finished order creation test case. Refactored everything, so it would be more easy to inject user creation into order-related tests.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/user/GetOrdersTest.java" afterDir="false" />
+    <list default="true" id="b8c9e775-d1e1-4255-9886-31c01930e6dd" name="Changes" comment="Second task is completed. Still have to add readme though.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/BaseTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/BaseTestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/user/common/OrderSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/user/common/OrderSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671116783435</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Second task is completed. Still have to add readme though.">
+      <created>1671225848225</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671225848225</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,6 +261,7 @@
     <MESSAGE value="Fixed authorization header bug. Completed update user functionality tests." />
     <MESSAGE value="Implemented UserApi. Added prototype test." />
     <MESSAGE value="Finished order creation test case. Refactored everything, so it would be more easy to inject user creation into order-related tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished order creation test case. Refactored everything, so it would be more easy to inject user creation into order-related tests." />
+    <MESSAGE value="Second task is completed. Still have to add readme though." />
+    <option name="LAST_COMMIT_MESSAGE" value="Second task is completed. Still have to add readme though." />
   </component>
 </project>

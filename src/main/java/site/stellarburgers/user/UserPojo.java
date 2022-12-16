@@ -1,4 +1,4 @@
-package org.example.user;
+package site.stellarburgers.user;
 
 public class UserPojo {
     private String email;

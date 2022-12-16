@@ -1,10 +1,9 @@
-package org.example.order;
+package site.stellarburgers.order;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.example.ClientInterface;
-import org.example.user.UserPojo;
+import site.stellarburgers.ClientInterface;
 
 public class OrderApi implements ClientInterface {
     public RequestSpecification request(OrderPojo order, String accessToken){
