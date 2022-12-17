@@ -30,6 +30,11 @@ public class BaseTestData {
         invalidOrder = new OrderPojo(invalidIngredients);
         emptyOrder = new OrderPojo(emptyIngredients);
         orderApi = new OrderApi();
+        try{
+            Thread.sleep(500);
+        } catch(InterruptedException e){
+            System.out.println(e.getMessage());
+        }
     }
 
     @Step("Get access token")
