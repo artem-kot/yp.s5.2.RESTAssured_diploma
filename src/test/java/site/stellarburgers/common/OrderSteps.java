@@ -1,4 +1,4 @@
-package site.stellarburgers.user.common;
+package site.stellarburgers.common;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;

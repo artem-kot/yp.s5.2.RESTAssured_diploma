@@ -1,4 +1,4 @@
-package site.stellarburgers.user.common;
+package site.stellarburgers.common;
 
 import io.qameta.allure.Step;
 import org.apache.commons.lang3.RandomStringUtils;
