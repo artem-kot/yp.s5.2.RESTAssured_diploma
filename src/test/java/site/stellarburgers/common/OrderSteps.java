@@ -12,7 +12,7 @@ public class OrderSteps extends BaseTestData {
     }
 
     @Step("Create order")
-    public Response createOrder(OrderPojo order, String accessToken){
+    public Response createOrder(OrderPojo order, String accessToken) {
         return orderApi.createOrder(order, accessToken);
     }
 

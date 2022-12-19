@@ -9,7 +9,7 @@ import java.io.*;
 
 public class UserApi implements ClientInterface {
 
-    public RequestSpecification request(UserPojo user, String accessToken){
+    public RequestSpecification request(UserPojo user, String accessToken) {
         return RestAssured
                 .given()
                 .spec(spec)
@@ -17,56 +17,56 @@ public class UserApi implements ClientInterface {
                 .body(user);
     }
 
-    public RequestSpecification request(UserPojo user){
+    public RequestSpecification request(UserPojo user) {
         return RestAssured
                 .given()
                 .spec(spec)
                 .body(user);
     }
 
-    public RequestSpecification request(String accessToken){
+    public RequestSpecification request(String accessToken) {
         return RestAssured
                 .given()
                 .spec(spec)
                 .header("Authorization", accessToken);
     }
 
-    public Response registerUser(UserPojo user){
+    public Response registerUser(UserPojo user) {
         Response response = request(user).post(registerUserUrl);
-        if(String.valueOf(response.statusCode()).equals("200")){
+        if (String.valueOf(response.statusCode()).equals("200")) {
             String accessToken = response.then().extract().body().path("accessToken").toString();
             storeData(accessToken);
         }
         return response;
     }
 
-    public Response loginUser(UserPojo user){
+    public Response loginUser(UserPojo user) {
         Response response = request(user).post(loginUserUrl);
-        if(String.valueOf(response.statusCode()).equals("200")){
+        if (String.valueOf(response.statusCode()).equals("200")) {
             String accessToken = response.then().extract().body().path("accessToken").toString();
             storeData(accessToken);
         }
         return response;
     }
 
-    public void deleteUser(String accessToken){
+    public void deleteUser(String accessToken) {
         request(accessToken).delete(deleteUserUrl);
     }
 
-    public Response updateUser(UserPojo user, String accessToken){
+    public Response updateUser(UserPojo user, String accessToken) {
         return request(user, accessToken).patch(updateUserUrl);
     }
 
-    public Response updateUser(UserPojo user){
+    public Response updateUser(UserPojo user) {
         return request(user).patch(updateUserUrl);
     }
 
-    public Response getUser(){
+    public Response getUser() {
         return request(new UserPojo()).get(getUserUrl);
     }
 
     public void storeData(String string) {
-        try{
+        try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(testdata));
             writer.write(string);
             writer.close();

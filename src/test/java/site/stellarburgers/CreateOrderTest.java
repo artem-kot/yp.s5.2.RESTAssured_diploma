@@ -2,8 +2,8 @@ package site.stellarburgers;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import site.stellarburgers.common.OrderSteps;
 import org.junit.Test;
+import site.stellarburgers.common.OrderSteps;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 

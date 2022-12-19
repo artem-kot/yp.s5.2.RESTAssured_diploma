@@ -21,7 +21,7 @@ public class UserSteps extends BaseTestData {
     }
 
     @Step("Update user without auth")
-    public Response updateUser(){
+    public Response updateUser() {
         return userApi.updateUser(validUser);
     }
 }
